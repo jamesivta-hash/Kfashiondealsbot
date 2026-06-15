@@ -1,1 +1,47 @@
-print ("Hello Kathy!!! your fashion deals bot is running.")
+# fashion_deals_bot.py
+import datetime
+
+def get_kathy_fashion_deals():
+    today = datetime.date.today().strftime("%B %d, %Y")
+    
+    print(f"Hello Kathy!!! 💕 Here are your Top 10 Fashion Deals for {today}\n")
+    print("I went hunting across Boston Proper, Talbots, Chico's, Nordstrom Rack and a few other spots for you.\n")
+    
+    # Placeholder deals - we'll replace with real ones soon
+    deals = [
+        {
+            "rank": 1,
+            "brand": "Boston Proper",
+            "item": "Linen Blend Pintuck Blouse",
+            "original": 129,
+            "sale": 59,
+            "savings": "54% off",
+            "description": "Beautiful crisp white blouse with lovely detail. So elegant and easy to dress up or down.",
+            "link": "https://www.bostonproper.com/collections/sale-clearance",
+            "unicorn": False
+        },
+        {
+            "rank": 2,
+            "brand": "Talbots",
+            "item": "Sleeveless Linen Shift Dress",
+            "original": 149,
+            "sale": 79,
+            "savings": "47% off",
+            "description": "Classic tailored shift dress in a beautiful soft color. Perfect for summer lunches and travel.",
+            "link": "https://www.talbots.com/",
+            "unicorn": False
+        }
+    ]
+    
+    for deal in deals:
+        unicorn = " ⭐ Unicorn Deal" if deal.get("unicorn") else ""
+        print(f"#{deal } 🛍️ {deal } — {deal }{unicorn}")
+        print(f"   ${deal } (was ${deal['original']}) — {deal }")
+        print(f"   {deal }")
+        print(f"   👉 {deal }")
+        print("─" * 65)
+    
+    print("\nThat's it for today Kathy! I'll be back tomorrow with more fresh finds 💕")
+
+if __name__ == "__main__":
+    get_kathy_fashion_deals()
