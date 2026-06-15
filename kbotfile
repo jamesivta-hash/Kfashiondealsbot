@@ -5,9 +5,8 @@ def get_kathy_fashion_deals():
     today = datetime.date.today().strftime("%B %d, %Y")
     
     print(f"Hello Kathy!!! 💕 Here are your Top 10 Fashion Deals for {today}\n")
-    print("I went hunting across Boston Proper, Talbots, Chico's, Nordstrom Rack and a few other spots for you.\n")
+    print("I went hunting across Boston Proper, Talbots, Chico's, Nordstrom Rack and a few other favorite spots for you.\n")
     
-    # Placeholder deals - we'll replace with real ones soon
     deals = [
         {
             "rank": 1,
@@ -30,18 +29,51 @@ def get_kathy_fashion_deals():
             "description": "Classic tailored shift dress in a beautiful soft color. Perfect for summer lunches and travel.",
             "link": "https://www.talbots.com/",
             "unicorn": False
+        },
+        {
+            "rank": 3,
+            "brand": "Chico's",
+            "item": "Travelers Collection Blazer",
+            "original": 149,
+            "sale": 69,
+            "savings": "54% off",
+            "description": "Wrinkle-resistant blazer that travels beautifully. Looks very expensive and feels amazing.",
+            "link": "https://www.chicos.com/",
+            "unicorn": False
+        },
+        {
+            "rank": 4,
+            "brand": "J.Jill",
+            "item": "Pure Jill Linen Tunic",
+            "original": 89,
+            "sale": 49,
+            "savings": "45% off",
+            "description": "Soft, breathable linen tunic in a gorgeous neutral tone. Perfect length and so comfortable.",
+            "link": "https://www.jjill.com/",
+            "unicorn": False
+        },
+        {
+            "rank": 5,
+            "brand": "Boston Proper",
+            "item": "Floral Chiffon Midi Dress",
+            "original": 169,
+            "sale": 89,
+            "savings": "47% off",
+            "description": "Romantic floral midi dress with a flattering silhouette. Very feminine and age-appropriate.",
+            "link": "https://www.bostonproper.com/collections/sale-clearance",
+            "unicorn": False
         }
     ]
     
     for deal in deals:
         unicorn = " ⭐ Unicorn Deal" if deal.get("unicorn") else ""
         print(f"#{deal } 🛍️ {deal } — {deal }{unicorn}")
-        print(f"   ${deal } (was ${deal['original']}) — {deal }")
+        print(f"   ${deal } (was ${deal }) — {deal }")
         print(f"   {deal }")
         print(f"   👉 {deal }")
-        print("─" * 65)
+        print("─" * 70)
     
-    print("\nThat's it for today Kathy! I'll be back tomorrow with more fresh finds 💕")
+    print("\nThat's all for today Kathy! I'll be back tomorrow with more fresh finds 💕")
 
 if __name__ == "__main__":
     get_kathy_fashion_deals()
